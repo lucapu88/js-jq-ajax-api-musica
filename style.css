@@ -7,12 +7,17 @@ header {
   background-color: #4682B4;
   height: 10vh;
 }
-.dischi-container {
-  background-color: #365D95;
-  height: 90vh;
-  padding: 50px;
+main {
   display: flex;
   align-items: center;
+  flex-direction: column;
+  background-color: #365D95;
+}
+.dischi-container {
+  background-color: #365D95;
+  height: 90%;
+  padding: 50px;
+  display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
@@ -24,6 +29,7 @@ header {
   flex-direction: column;
   color: white;
   border-radius: 10px;
+  margin: 20px;
 }
 .copertina {
   width: 100%;
@@ -38,4 +44,10 @@ header {
 }
 .anno {
   padding-bottom: 50px;
+}
+.trovaAlbum {
+  padding: 20px;
+  background-color: #4682B4;
+  color: white;
+  font-weight: bold;
 }

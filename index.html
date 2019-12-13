@@ -9,14 +9,23 @@
   </head>
   <body>
     <header></header>
-    <div class="dischi-container"></div>
+    <main>
+      <select class="trovaAlbum" name="">
+        <option value="">Scegli un genere</option>
+        <option value="pop">Pop</option>
+        <option value="rock">Rock</option>
+        <option value="metal">Metal</option>
+        <option value="jazz">Jazz</option>
+      </select>
+      <div class="dischi-container"></div>
+    </main>
 
     <script id="myTemplate" type="text/x-handlebars-template">
-      <div class="disco-singolo">
-        <img class="copertina" src={{imgCopertina}} alt="">
+      <div class="disco-singolo" dataGenere={{genere}}>
+        <img class="copertina" src={{imgCopertina}} alt="{{titolo}}">
         <h3 class="titolo">{{titolo}}</h3>
         <p class="artista">{{artista}}</p>
-        <p class="anno">{anno}</p>
+        <p class="anno">{{anno}}</p>
       </div>
     </script>
 
