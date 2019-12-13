@@ -9,12 +9,13 @@ $.ajax({
   url : 'https://flynn.boolean.careers/exercises/api/array/music',
   method : 'get',
   success : function(data) {
-    for (var i = 0; i < data.response; i++) {
+    var album = data.response //recupero l'array che è nell'url e contiene le proprietà di tutti gli album
+    for (var i = 0; i < album.length; i++) {
       var context = { //creo la variabile con il contenuto che andrà nel template
-        imgCopertina : data.poster,
-        titolo : data.title,
-        artista : data.author,
-        anno : data.year
+        imgCopertina : album[i].poster,
+        titolo : album[i].title,
+        artista : album[i].author,
+        anno : album[i].year
       }
       var disco = template_function(context); // utilizzando la funzione generata da handlebars, creo l'html finale
       $('.dischi-container').append(disco); // infine vado ad appendere nel container il mio template
