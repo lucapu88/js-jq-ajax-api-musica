@@ -3,3 +3,39 @@
   padding: 0;
   box-sizing: border-box;
 }
+header {
+  background-color: #4682B4;
+  height: 10vh;
+}
+.dischi-container {
+  background-color: #365D95;
+  height: 90vh;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.disco-singolo {
+  width: 200px;
+  background-color: #4682B4;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  border-radius: 10px;
+}
+.copertina {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+}
+.titolo {
+  text-transform: uppercase;
+}
+.artista {
+  padding-top: 20px;
+}
+.anno {
+  padding-bottom: 50px;
+}
