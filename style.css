@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Kanit', sans-serif;
 }
 header {
   background-color: #4682B4;
@@ -38,6 +39,8 @@ main {
 }
 .titolo {
   text-transform: uppercase;
+  margin: 0 10px 0 10px;
+  text-align: center;
 }
 .artista {
   padding-top: 20px;
@@ -50,4 +53,6 @@ main {
   background-color: #4682B4;
   color: white;
   font-weight: bold;
+  font-size: 20px;
+
 }

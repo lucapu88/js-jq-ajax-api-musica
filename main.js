@@ -26,13 +26,19 @@ $(document).ready(function(){
     }
   });
   $('.trovaAlbum').change(function(){ //verifico se il genere dell'album corrisponde al genere selezionato
-    $('.disco-singolo').each(function(){ //vado a verificarlo per ogni singolo disco
-      var genere = $(this).attr('dataGenere'); //creo una var che mi prende l'attributo del data
-      if (genere.toLowerCase() == $('.trovaAlbum').val()) { //se il genere del disco è uguale al genere selezionato nel select allora lo mostro
-        $(this).fadeIn();
-      } else {
-        $(this).fadeOut(); //altrimenti lo nascondo
-      }
-    });
+      var genereSelect = $('.trovaAlbum').val() //creo una var che mi prende il genere selezionato dal select (ovvero il val dell'option)
+    if (genereSelect == '') { // se il genere selezionato è uguale ad una stringa vuota, ovvero è impostato su 'Scegli un genere' (che non ha val)
+      $('.disco-singolo').fadeIn(); //mostra tutti i div con gli album
+    } else { //altrimenti, se è impostato su una delle tipologie di generi (rock metal ecc...)
+      $('.disco-singolo').each(function(){ //vado a verificare per ogni singolo div
+        var genere = $(this).attr('dataGenere'); //creo una var che mi prende l'attributo del data
+        if (genere.toLowerCase() == genereSelect.toLowerCase()) { //se il genere del data attribuito al div è uguale al genere del disco selezionato dal select, allora lo mostro
+          $(this).fadeIn();
+        } else {
+          $(this).fadeOut(); //altrimenti lo nascondo
+        }
+      });
+    }
+
   });
 });
