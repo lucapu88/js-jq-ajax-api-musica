@@ -33,6 +33,13 @@ main {
   border-radius: 10px;
   margin: 20px;
 }
+.disco-singolo:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  -webkit-box-shadow: 0px 0px 39px 12px rgba(0,0,0,0.46);
+  -moz-box-shadow: 0px 0px 39px 12px rgba(0,0,0,0.46);
+  box-shadow: 0px 0px 39px 12px rgba(0,0,0,0.46);
+}
 .copertina {
   width: 100%;
   padding: 20px;
